@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" standalone="yes"?>
+
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:Locale="">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="RFS_WorkflowAssembly" msdata:Locale="">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FormType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AssemblyName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AssociatedWorkflow" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//RFS_WorkflowAssembly" />
+        <xs:field xpath="FormType" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <!--
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.WORKFLOW.WORKFLOWID</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.WORKFLOW.dll</AssemblyName>
+    <AssociatedWorkflow>WORKFLOWID</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  -->
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.ShopFloor.SRChinaWorkOrderCompletion</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.ShopFloor.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaWorkOrderCompletion</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.Picking.SRChinaSalesOrderPicking</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.Picking.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaSalesOrderPicking</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.Receiving.SRChinaReceiptRouting</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.Receiving.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaReceiptRouting</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.Receiving.SRChinaPOReceipts</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.Receiving.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaPOReceipts</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.Inventory.SRChinaInventoryTransfers</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.Inventory.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaInventoryTransfers</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.Inventory.SRChinaInventoryInquiry</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.Inventory.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaInventoryInquiry</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+  <RFS_WorkflowAssembly>
+    <FormType>ICS.SRChina.Wireless.JDE.Workflow.Inventory.SRChinaInventoryAdjustments</FormType>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Workflow.Inventory.dll</AssemblyName>
+    <AssociatedWorkflow>SRChinaInventoryAdjustments</AssociatedWorkflow>
+  </RFS_WorkflowAssembly>
+</NewDataSet>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <DirectoryRef Id="RTTC">
+      <Directory Id="Adapters" Name="adapters">
+        <Directory Id="JDEW" Name="GHSPChina_JDEWireless">
+          <Directory Id="Build_JDEW" Name="$(env.BUILD_NUMBER)">
+            <Component Id="JDEWorkflows" Guid="f220c6be-02b8-446a-8905-2153ad603b9e">
+              <File Id="JDETables" Name="$(var.ICS.SRChina.Wireless.JDE.Database.TableObjects.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.Database.TableObjects.TargetPath)" />
+              <File Id="ERPIPlugin" Name="$(var.ICS.SRChina.Wireless.JDE.ERPI.ErpPlugin.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.ERPI.ErpPlugin.TargetPath)" />
+              <File Id="ERPI" Name="$(var.ICS.SRChina.Wireless.JDE.ERPI.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.ERPI.TargetPath)" />
+              <File Id="Utilities" Name="$(var.ICS.SRChina.Wireless.JDE.Utilities.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.Utilities.TargetPath)" />
+              <File Id="Inventory" Name="$(var.ICS.SRChina.Wireless.JDE.Workflow.Inventory.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.Workflow.Inventory.TargetPath)" />
+              <File Id="Picking" Name="$(var.ICS.SRChina.Wireless.JDE.Workflow.Picking.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.Workflow.Picking.TargetPath)" />
+              <File Id="Receiving" Name="$(var.ICS.SRChina.Wireless.JDE.Workflow.Receiving.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.Workflow.Receiving.TargetPath)" />
+              <File Id="ShopFloor" Name="$(var.ICS.SRChina.Wireless.JDE.Workflow.ShopFloor.TargetFileName)"
+                    Source="$(var.ICS.SRChina.Wireless.JDE.Workflow.ShopFloor.TargetPath)" />
+              <File Id="JDEToRFSExtended.xsl" Name="JDEToRFSExtended.xsl"
+                    Source="..\GHSPChina\ICSLocalWebService\JDEToRFSExtended.xsl" />
+              <File Id="RFSToJDEExtended.xsl" Name="RFSToJDEExtended.xsl"
+                    Source="..\GHSPChina\ICSLocalWebService\RFSToJDEExtended.xsl" />
+              <File Id="JDERFS_TxPSUpdateBack.xsl" Name="JDERFS_TxPSUpdateBack.xsl"
+                    Source="..\GHSPChina\ICSLocalWebService\JDERFS_TxPSUpdateBack.xsl" />
+              <File Id="TxRFS_TxPSUpdate.xsl" Name="TxRFS_TxPSUpdate.xsl"
+                    Source="..\GHSPChina\ICSLocalWebService\TxRFS_TxPSUpdate.xsl" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="JDEdata" Name="database">
+        <Directory Id="dataJDE" Name="data">
+          <Directory Id="JDEDATA" Name="JDEDEV">
+            <Component Id="JDEDataFiles" DiskId="1" Guid="c152dad7-8ae7-4496-99dd-4c55d09986de">
+              <File Id="RFS_Vocabulary.XML" Name="RFS_Vocabulary.XML" Source="..\Database\Data\RFS_Vocabulary.XML" />
+              <File Id="RFS_WorkflowAssembly.XML" Name="RFS_WorkflowAssembly.XML"
+                    Source="..\Database\Data\RFS_WorkflowAssembly.XML" />
+              <File Id="SRChinaSalesOrderPicking.XML" Name="SRChinaSalesOrderPicking-Screens.XML"
+                    Source="..\Database\Data\SRChinaSalesOrderPicking-Screens.XML" />
+              <File Id="SRChinaWorkOrderCompletion.XML" Name="SRChinaWorkOrderCompletion-Screens.XML"
+                    Source="..\Database\Data\SRChinaWorkOrderCompletion-Screens.XML" />
+              <File Id="SRChinaPOReceipts.XML" Name="SRChinaPOReceipts-Screens.XML"
+                    Source="..\Database\Data\SRChinaPOReceipts-Screens.XML" />
+              <File Id="SRChinaReceiptRouting.XML" Name="SRChinaReceiptRouting-Screens.XML"
+                    Source="..\Database\Data\SRChinaReceiptRouting-Screens.XML" />
+              <File Id="SRChinaInventoryAdjustments.XML" Name="SRChinaInventoryAdjustments-Screens.XML"
+                    Source="..\Database\Data\SRChinaInventoryAdjustments-Screens.XML" />
+              <File Id="SRChinaInventoryInquiry.XML" Name="SRChinaInventoryInquiry-Screens.XML"
+                    Source="..\Database\Data\SRChinaInventoryInquiry-Screens.XML" />
+              <File Id="SRChinaInventoryTransfers.XML" Name="SRChinaInventoryTransfers-Screens.XML"
+                    Source="..\Database\Data\SRChinaInventoryTransfers-Screens.XML" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </DirectoryRef>
+    <ComponentGroup Id="WirelessComponents">
+      <ComponentRef Id="JDEWorkflows" />
+      <ComponentRef Id="JDEDataFiles" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

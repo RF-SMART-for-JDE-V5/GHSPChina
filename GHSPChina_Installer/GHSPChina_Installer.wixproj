@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>cddb204b-6fee-4fd4-8cf6-bccfb1ab4293</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>GHSPChina_JDEInstaller</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <TemplateType>Installer</TemplateType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+    <Compile Include="RFSUI_Minimal.wxs" />
+    <Compile Include="WirelessComponents.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JDEwireless.SED" />
+    <Content Include="rfs.ico" />
+    <Content Include="rfsSetup.exe" />
+    <Content Include="RFS_Background.jpg" />
+    <Content Include="Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GHSPChina\Database\TableObjects\JDE\ICS.SRChina.Wireless.JDE.Database.TableObjects.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.Database.TableObjects</Name>
+      <Project>{BB772C9F-0ED5-41CE-A3CE-73F54683E90B}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\ERPI\ICS.SRChina.Wireless.JDE.ERPI.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.ERPI</Name>
+      <Project>{94F250DC-F09E-41B7-91E0-E908F1D89194}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\ICSLocalWebService\ICS.SRChina.Wireless.JDE.ERPI.ErpPlugin.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.ERPI.ErpPlugin</Name>
+      <Project>{76730286-7E0B-4139-8EE7-4213BACA8743}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\Utilities\ICS.SRChina.Wireless.JDE.Utilities.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.Utilities</Name>
+      <Project>{D7BEB13E-8158-41E4-8BDD-0032CDEB8E91}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\Workflows\Inventory\ICS.SRChina.Wireless.JDE.Workflow.Inventory.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.Workflow.Inventory</Name>
+      <Project>{8803B95F-1505-4C94-BA7C-368A444123BB}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\Workflows\Picking\ICS.SRChina.Wireless.JDE.Workflow.Picking.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.Workflow.Picking</Name>
+      <Project>{20729633-433A-4D1E-8952-4AC01F1AACEE}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\Workflows\Receiving\ICS.SRChina.Wireless.JDE.Workflow.Receiving.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.Workflow.Receiving</Name>
+      <Project>{9DA4DC5A-2C9D-4916-B7CD-048FC8720F11}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\GHSPChina\Workflows\ShopFloor\ICS.SRChina.Wireless.JDE.Workflow.ShopFloor.csproj">
+      <Name>ICS.SRChina.Wireless.JDE.Workflow.ShopFloor</Name>
+      <Project>{CCD4F781-AF42-4C30-8B29-EB5BBDE7DC68}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(ProjectDir)"
+cd $(ProjectDir)
+del /Q GHSPChina_JDEInstaller_%2a.exe
+IExpress.exe /N /Q JDEwireless.sed
+ren "GHSPChina.exe" "GHSPChina_JDEInstaller_$(BUILD_NUMBER).exe"
+call "C:\signitWithDescription.bat" "GHSP China Custom" "GHSPChina_JDEInstaller_$(BUILD_NUMBER).exe"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB772C9F-0ED5-41CE-A3CE-73F54683E90B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICS.SRChina.Wireless.JDE.Database.TableObjects</RootNamespace>
+    <AssemblyName>ICS.SRChina.Wireless.JDE.Database.TableObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <TemplateType>JDETableObjects</TemplateType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>RFS5Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICS.BarcodeSubsystem, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.BarcodeSubsystem.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Base.Wireless.JDE.BusinessConnector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Base.Wireless.JDE.BusinessConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Base.Wireless.JDE.ExtendedService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Base.Wireless.JDE.ExtendedService.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Base.Wireless.JDE.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Base.Wireless.JDE.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Base.Wireless.JDE.Workflow.Components, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Base.Wireless.JDE.Workflow.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Base.Wireless.JDE.Workflow.WorkflowHelpers, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Base.Wireless.JDE.Workflow.WorkflowHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Database, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Database.TableObjects.JDE, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Database.TableObjects.JDE.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Database.TableObjects.RFS, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Database.TableObjects.RFS.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Database.TableObjects.RFS_V2, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Database.TableObjects.RFS_V2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Display, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.ERPI, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.ERPI.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.ERPI.JDE, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.ERPI.JDE.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.ErpPlugin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.ErpPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.ExtendedSvcPlugin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.ExtendedSvcPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Extensions.PrimitiveExtensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Extensions.PrimitiveExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.GUI_Library, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.GUI_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.JDEPlugin, Version=5.9.1.84, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.JDEPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.LabelPlugin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.LabelPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.LabelPrinting.PrintTypes.Base, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.LabelPrinting.PrintTypes.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Labels.Base.JDE, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.Labels.Base.JDE.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.License, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.License.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.MessagingServices, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.MessagingServices.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.NET.PortChecks, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.NET.PortChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Net.RemoteUser, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Net.RemoteUser.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.PrintSubsystem, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.PrintSubsystem.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.RFSmartV2, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.RFSmartV2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Security, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Triggers, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Triggers.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Utilities, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Utilities.Zip, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Utilities.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Web, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.WorkFlow.Base, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.WorkFlow.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.Workflow.Base.WorkflowDesign, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Foundation.5.9.1.17\lib\net48\ICS.Workflow.Base.WorkflowDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="ICS.WorldPlugin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0ed20b3d9a4523e9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\5.9.1Wireless.5.9.1.84\lib\net48\ICS.WorldPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="F3112.cs" />
+    <Compile Include="F3112_Base.cs" />
+    <Compile Include="F4104.cs" />
+    <Compile Include="F4104_Base.cs" />
+    <Compile Include="F4211.cs" />
+    <Compile Include="F4211_Base.cs" />
+    <Compile Include="F43092.cs" />
+    <Compile Include="F460131.cs" />
+    <Compile Include="F460131_Base.cs" />
+    <Compile Include="F59RF480.cs" />
+    <Compile Include="F59RF480_Base.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="RFS5Key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Target Name="BeforeBuild" Condition=" '$(Configuration)' == 'Release' ">
+    <AssemblyInfo CodeLanguage="CS" OutputFile="$(ProjectDir)\Properties\AssemblyInfo.cs" AssemblyConfiguration="" AssemblyTitle="$(AssemblyName)" AssemblyCompany="ICS" AssemblyProduct="RF-SMART V5 Wireless" AssemblyCopyright="Copyright © ICS 2022" AssemblyTrademark="" ComVisible="false" CLSCompliant="false" AssemblyVersion="$(BUILD_NUMBER)" AssemblyFileVersion="$(BUILD_NUMBER)" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+  xcopy /Y "$(TargetPath)" "$(RFS5Install)adapters\environments\basetemps\"
+)
+xcopy /Y "$(TargetPath)" "$(SolutionDir)basetemps\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
