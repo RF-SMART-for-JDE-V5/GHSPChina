@@ -1,4 +1,5 @@
 ﻿using ICS.Database;
+using ICS.Database.TableObjects.RFS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace ICS.SRChina.Wireless.JDE.Database.TableObjects
     /// </summary>
     public class F43092 : ICS.Database.TableObjects.JDE.F43092
     {
+        private RFS_TableOwnerOverride TableOwnerOverride;
+
         #region Constructors
 
         /// <summary>
@@ -29,6 +32,7 @@ namespace ICS.SRChina.Wireless.JDE.Database.TableObjects
         /// <param name="tableID">ID appended to the front of the table name to allow for multiple instances of the same table to exist in the UserDS</param>
         public F43092(DAL dbConnections, string tableID) : base(dbConnections, tableID)
         {
+            TableOwnerOverride = new RFS_TableOwnerOverride(dbConnections, "TableOwnerOverride_" + tableID);
         }
 
         #endregion
