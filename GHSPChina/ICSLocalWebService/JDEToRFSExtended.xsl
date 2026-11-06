@@ -10,9 +10,6 @@
           <xsl:with-param name="SequenceNumber" select="@app" />
         </xsl:call-template>
       </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="JDEToRFSCustomXSL_Europe" />
-      </xsl:otherwise>
     </xsl:choose>
     <!-- Remove comments and add name of business function and Function back template
 name-->

@@ -10,9 +10,6 @@
           <xsl:call-template name="RFS_TxPSUpdate" />
         </xsl:for-each>
       </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="RFSToJDECustomXSL_Europe" />
-      </xsl:otherwise>
     </xsl:choose>
     <!-- Remove comments and add name of RFS Transaction and name of custom template
 created -->
